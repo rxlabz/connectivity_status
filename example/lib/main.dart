@@ -64,8 +64,8 @@ class _MyHomePageState extends State<MyHomePage> {
     try {
       isConnected = await ConnectivityStatus.isConnected;
       connectivityStatus = isConnected ? "Connected" : "Not connected";
-    } on PlatformException {
-      connectivityStatus = "Failed to get platform version";
+    } on PlatformException catch(err){
+      connectivityStatus = "Not connected ${err}";
     }
 
     // If the widget was removed from the tree while the asynchronous platform
@@ -85,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: new AppBar(
         title: new Text('Plugin example app'),
       ),
-      body: new Center(child: new Text('Running on: $_connectivityStatus\n')),
+      body: new Center(child: new Text('$_connectivityStatus')),
     );
   }
 }

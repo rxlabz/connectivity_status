@@ -9,7 +9,7 @@ public class SwiftConnectivityStatusPlugin: NSObject, FlutterPlugin {
     }
 
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
-        if call.method == "checkConnectivity" {
+        if call.method == "isConnected" {
             result(isConnected());
         } else {
             result(FlutterMethodNotImplemented)

@@ -7,5 +7,5 @@ class ConnectivityStatus {
       const MethodChannel('connectivity_status');
 
   static Future<bool> get isConnected =>
-      _channel.invokeMethod('checkConnectivity');
+      _channel.invokeMethod('isConnected');
 }
