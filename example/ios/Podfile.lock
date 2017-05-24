@@ -1,0 +1,22 @@
+PODS:
+  - connectivity_status (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - connectivity_status (from `/Users/rxlabz/dev/projects/fluttrx_plugins/connectivity_status/ios`)
+  - Flutter (from `/Users/rxlabz/dev/tools/flutter/bin/cache/artifacts/engine/ios`)
+
+EXTERNAL SOURCES:
+  connectivity_status:
+    :path: /Users/rxlabz/dev/projects/fluttrx_plugins/connectivity_status/ios
+  Flutter:
+    :path: /Users/rxlabz/dev/tools/flutter/bin/cache/artifacts/engine/ios
+
+SPEC CHECKSUMS:
+  connectivity_status: c684cc75bf1654832f392111ada681a680e82e6c
+  Flutter: d674e78c937094a75ac71dd77e921e840bea3dbf
+
+PODFILE CHECKSUM: cc70c01bca487bebd110b87397f017f3b76a89f1
+
+COCOAPODS: 1.2.0

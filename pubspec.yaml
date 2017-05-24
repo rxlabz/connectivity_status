@@ -1,0 +1,11 @@
+name: connectivity_status
+description: A new flutter plugin project.
+
+flutter:
+  plugin:
+    androidPackage: com.yourcompany.connectivity_status
+    pluginClass: ConnectivityStatusPlugin
+
+dependencies:
+  flutter:
+    sdk: flutter
