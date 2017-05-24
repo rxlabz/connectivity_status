@@ -1,17 +1,14 @@
-package com.yourcompany.connectivity_status;
+package bz.rxla.flutter.connectivity_status;
 
 import android.app.Activity;
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
-import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
-
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-
-import static java.security.AccessController.getContext;
 
 /**
  * ConnectivityStatusPlugin
@@ -37,7 +34,7 @@ public class ConnectivityStatusPlugin implements MethodCallHandler {
   public void onMethodCall(MethodCall call, Result result) {
 
     if(  connManager == null )
-    connManager = (ConnectivityManager) activity.getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+      connManager = (ConnectivityManager) activity.getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
 
     if (call.method.equals("isConnected")) {
       NetworkInfo info = connManager.getActiveNetworkInfo();

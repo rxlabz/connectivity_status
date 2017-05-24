@@ -18,3 +18,7 @@ isConnected = await ConnectivityStatus.isConnected;
 ## Android
 
 - :warning: needs the `ACCESS_NETWORK_STATE` permission
+
+## Todo 
+
+- [ ] option to stream the status connection

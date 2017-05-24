@@ -1,4 +1,4 @@
-package com.yourcompany.connectivity_status_example;
+package bz.rxla.connectivity_status_example;
 
 import android.os.Bundle;
 

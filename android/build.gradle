@@ -1,4 +1,4 @@
-group 'com.yourcompany.connectivity_status'
+group 'bz.rxla.connectivity_status'
 version '1.0-SNAPSHOT'
 
 buildscript {

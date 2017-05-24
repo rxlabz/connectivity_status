@@ -3,7 +3,7 @@ description: A new flutter plugin project.
 
 flutter:
   plugin:
-    androidPackage: com.yourcompany.connectivity_status
+    androidPackage: bz.rxla.flutter.connectivity_status
     pluginClass: ConnectivityStatusPlugin
 
 dependencies:

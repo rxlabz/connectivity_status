@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yourcompany.connectivity_status_example"
+    package="bz.rxla.connectivity_status_example"
     android:versionCode="1"
     android:versionName="0.0.1">
 
