@@ -1,6 +1,6 @@
+import 'package:connectivity_status/connectivity_status.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:connectivity_status/connectivity_status.dart';
 
 void main() {
   runApp(new MyApp());
@@ -53,26 +53,25 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   initState() {
     super.initState();
-    initPlatformState();
+    updateConnectivityState();
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.
-  initPlatformState() async {
+  updateConnectivityState() async {
     bool isConnected;
     String connectivityStatus;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
       isConnected = await ConnectivityStatus.isConnected;
       connectivityStatus = isConnected ? "Connected" : "Not connected";
-    } on PlatformException catch(err){
+    } on PlatformException catch (err) {
       connectivityStatus = "Not connected ${err}";
     }
 
     // If the widget was removed from the tree while the asynchronous platform
     // message was in flight, we want to discard the reply rather than calling
     // setState to update our non-existent appearance.
-    if (!mounted)
-      return;
+    if (!mounted) return;
 
     setState(() {
       _connectivityStatus = connectivityStatus;
@@ -85,7 +84,13 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: new AppBar(
         title: new Text('Plugin example app'),
       ),
-      body: new Center(child: new Text('$_connectivityStatus')),
+      body: new Center(
+          child: new Row(children: [
+        new Text('$_connectivityStatus'),
+        new IconButton(
+            icon: new Icon(Icons.refresh),
+            onPressed: () => updateConnectivityState())
+      ])),
     );
   }
 }
