@@ -1,6 +1,6 @@
 name: connectivity_status
 version: 0.1.1
-description: A new flutter plugin project.
+description: A flutter plugin to check the device connectivity.
 author: Erick Ghaumez <erick@rxla.bz>
 homepage: https://github.com/rxlabz/connectivity_status
 
