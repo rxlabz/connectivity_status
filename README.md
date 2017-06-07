@@ -1,11 +1,11 @@
-# connectivity_status POC
+# connectivity_status
 
 A flutter plugin to check the device connectivity 
 
 ## Example
 
 ```bash
-cd flutter_video_launcher/example
+cd connectivity_status/example
 flutter packages get
 flutter run
 ```
