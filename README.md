@@ -1,4 +1,6 @@
-# connectivity_status
+# DEPRECATED ~~connectivity_status~~
+
+=> see the official Flutter plugin https://pub.dartlang.org/packages/connectivity
 
 A flutter plugin to check the device connectivity 
 
